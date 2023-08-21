@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<HBox prefHeight="400.0" prefWidth="697.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.programmazione_avanzata.final_project.chef_ideas_app.controller.AddNewRecipeViewController">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="288.0" style="-fx-background-color: F06A08;">
+         <children>
+            <Label layoutX="28.0" layoutY="243.0" text="Chefs' Idea" wrapText="true">
+               <font>
+                  <Font name="Academy Engraved LET Plain:1.0" size="39.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="45.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logos/chef-logo.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="return_button" layoutX="62.0" layoutY="336.0" mnemonicParsing="false" onAction="#onReturnButton" style="-fx-background-color: #ebcc9e;" text="Go back to menu" textFill="WHITE">
+               <font>
+                  <Font name="Apple LiGothic Medium" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <ScrollPane prefHeight="400.0" prefWidth="467.0">
+         <content>
+            <AnchorPane prefHeight="563.0" prefWidth="422.0">
+               <children>
+                  <GridPane layoutX="35.0" layoutY="105.0" prefHeight="458.0" prefWidth="372.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="138.0" minWidth="10.0" prefWidth="81.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.0" minWidth="10.0" prefWidth="291.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label prefHeight="40.0" prefWidth="100.0" text="Name">
+                           <font>
+                              <Font name="Canela Text Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="34.0" prefWidth="100.0" text="Link" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Canela Text Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="42.0" prefWidth="100.0" text="Ingredients" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Canela Text Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label text="Steps" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Canela Text Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label text="Products" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="Canela Text Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                           <children>
+                              <TextField fx:id="name_text_field" layoutY="28.0" prefHeight="23.0" prefWidth="291.0">
+                                 <font>
+                                    <Font name="Apple LiGothic Medium" size="13.0" />
+                                 </font>
+                              </TextField>
+                              <Label fx:id="name_error_input" layoutY="60.0" prefHeight="17.0" prefWidth="243.0">
+                                 <font>
+                                    <Font name="Apple LiGothic Medium" size="12.0" />
+                                 </font></Label>
+                           </children>
+                        </AnchorPane>
+                        <TextField fx:id="link_text_field" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Apple LiGothic Medium" size="13.0" />
+                           </font>
+                        </TextField>
+                        <TextArea fx:id="ingredients_text_area" prefHeight="33.0" prefWidth="244.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Apple LiGothic Medium" size="13.0" />
+                           </font>
+                        </TextArea>
+                        <TextArea fx:id="steps_text_area" prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Apple LiGothic Medium" size="13.0" />
+                           </font>
+                        </TextArea>
+                        <TextArea fx:id="products_text_area" prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="Apple LiGothic Medium" size="13.0" />
+                           </font>
+                        </TextArea>
+                     </children>
+                  </GridPane>
+                  <Label fx:id="process_message_label" layoutX="29.0" layoutY="16.0" prefHeight="17.0" prefWidth="308.0">
+                     <font>
+                        <Font name="Apple LiGothic Medium" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="154.0" layoutY="25.0" text="Add new recipe">
+                     <font>
+                        <Font name="Canela Text Regular" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="35.0" layoutY="73.0" prefHeight="26.0" prefWidth="283.0" text="Please fill the fields below:" textFill="#f0690a" underline="true">
+                     <font>
+                        <Font name="Apple LiGothic Medium" size="16.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="submit_button" layoutX="337.0" layoutY="73.0" mnemonicParsing="false" onAction="#onSubmitButton" prefHeight="27.0" prefWidth="66.0" style="-fx-background-color: #f0690a;" text="Submit" textFill="WHITE">
+                     <font>
+                        <Font name="Apple LiGothic Medium" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</HBox>

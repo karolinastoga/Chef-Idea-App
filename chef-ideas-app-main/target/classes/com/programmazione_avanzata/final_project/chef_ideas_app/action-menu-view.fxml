@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<HBox prefHeight="358.0" prefWidth="704.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.programmazione_avanzata.final_project.chef_ideas_app.controller.ActionMenuViewController">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="254.0" style="-fx-background-color: F06A08;">
+         <children>
+            <Label layoutX="28.0" layoutY="243.0" text="Chefs' Idea" wrapText="true">
+               <font>
+                  <Font name="Academy Engraved LET Plain:1.0" size="39.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="45.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logos/chef-logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="400.0" prefWidth="445.0">
+         <children>
+            <Label layoutX="79.0" layoutY="29.0" text="Welcome to the world of recipes!">
+               <font>
+                  <Font name="Canela Text Regular" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="41.0" layoutY="91.0" prefHeight="26.0" prefWidth="283.0" text="Choose what do you want to do today" textFill="#f0690a" underline="true">
+               <font>
+                  <Font name="Apple LiGothic Medium" size="17.0" />
+               </font>
+            </Label>
+            <GridPane layoutX="41.0" layoutY="124.0" prefHeight="217.0" prefWidth="364.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="348.9217529296875" minWidth="10.0" prefWidth="288.8284912109375" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="137.0" minWidth="10.0" prefWidth="74.6715087890625" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="63.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="99.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="99.0" minHeight="4.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="102.0" minHeight="10.0" prefHeight="77.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label prefHeight="37.0" prefWidth="228.0" text="I want to see all recipes" wrapText="true">
+                     <font>
+                        <Font name="Apple LiGothic Medium" size="15.0" />
+                     </font></Label>
+                  <Label prefHeight="43.0" prefWidth="246.0" text="I want to add new recipe" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Apple LiGothic Medium" size="15.0" />
+                     </font></Label>
+                  <Label prefHeight="59.0" prefWidth="263.0" text="I want to find recipe by name" wrapText="true" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Apple LiGothic Medium" size="15.0" />
+                     </font></Label>
+                  <Label prefHeight="78.0" prefWidth="247.0" text="I want to know what I can cook with products I already have" wrapText="true" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Apple LiGothic Medium" size="15.0" />
+                     </font></Label>
+                  <Button fx:id="show_all_button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#onShowAllButton" prefHeight="24.0" prefWidth="147.0" style="-fx-background-color: F06A08;" text="Show all" textAlignment="RIGHT" textFill="WHITE" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Apple LiGothic Medium" size="14.0" />
+                     </font></Button>
+                  <Button fx:id="add_new_button" mnemonicParsing="false" onAction="#onAddNewButton" prefHeight="26.0" prefWidth="145.0" style="-fx-background-color: F06A08;" text="Add new" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Apple LiGothic Medium" size="14.0" />
+                     </font></Button>
+                  <Button fx:id="search_button" mnemonicParsing="false" onAction="#onSearchButton" prefHeight="26.0" prefWidth="168.0" style="-fx-background-color: F06A08;" text="Search" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Apple LiGothic Medium" size="14.0" />
+                     </font></Button>
+                  <Button fx:id="find_recipe_button" mnemonicParsing="false" onAction="#onFindRecipeButton" prefHeight="26.0" prefWidth="144.0" style="-fx-background-color: F06A08;" text="Find recipe" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Apple LiGothic Medium" size="14.0" />
+                     </font></Button>
+               </children>
+            </GridPane>
+            <Line endX="230.0" layoutX="173.0" layoutY="117.0" startX="-132.0" />
+         </children></AnchorPane>
+   </children>
+</HBox>
